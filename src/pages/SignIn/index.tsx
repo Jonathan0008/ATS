@@ -1,41 +1,45 @@
 import React from 'react';
-import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { Button, Gap, PageHeader, TextInput } from '../../components';
-import Logo from '../../assets/icon/Google-Logo--Streamline-Logos.svg';
+import {
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
+import {Button, Gap, PageHeader, TextInput} from '../../components';
 
-const SignIn = ({ navigation }) => {
+const SignIn = ({navigation}) => {
   return (
-    <ScrollView style={styles.container}>
-      <Gap height={167} />
-      <Text style={styles.text1}>Selamat Datang!</Text>
-      <Gap height={14} />
-      <Text style={styles.text2}>
-        Jaga dan cintai lingkungan bersama TITO sahabat peduli lingkungan!
-      </Text>
-      <Gap height={71} />
-      <TextInput placeholder="Email" label={undefined} />
-      <Gap height={21} />
-      <TextInput placeholder="Password" label={undefined} />
-      <Gap height={66} />
-      <Button
-        textColor="#FFFFFF"
-        label="Masuk"
-        onSubmit={() => navigation.navigate('Home')}
-        type={undefined}
-        icon={undefined}
-      />
-      <Gap height={38.75} />
-      <Text style={styles.text3}>Atau masuk dengan</Text>
-      <Gap height={27} />
-      <View style={styles.logoContainer}>
-        <Logo />
+    <View style={styles.container}>
+      <View style={styles.HeadersContainer}>
+        <Gap height={120} />
+        <Text style={styles.TextHeader}>Masuk ke akun Anda</Text>
+        <Text style={styles.TextHeader2}>Log in to your Account</Text>
       </View>
-      <Gap height={101} />
-      <Text style={styles.text3}>Belum Punya Akun?</Text>
-      <TouchableOpacity onPress={() => navigation.navigate('SignUp')}>
-        <Text style={[styles.text3, styles.registerText]}>Register</Text>
-      </TouchableOpacity>
-    </ScrollView>
+      <View style={styles.container}>
+        <Gap height={61} />
+        <Text style={styles.TextInputTop}>Email</Text>
+        <TextInput placeholder="Masukan Email Anda" />
+        <Gap height={12} />
+        <Text style={styles.TextInputTop}>Password</Text>
+        <TextInput placeholder="Masukan Password Anda" />
+        <Gap height={25} />
+        <Button
+          label="Masuk"
+          textColor="#E9EFEC"
+          onSubmit={() => navigation.navigate('Home')}
+          type={undefined}
+          icon={undefined}
+        />
+        <Gap height={240} />
+        <ScrollView horizontal={true}>
+          <Text style={styles.TextBottom}>Belum Punya Akun?</Text>
+          <TouchableOpacity onPress={() => navigation.navigate('SignUp')}>
+            <Text style={styles.TextBottomContainer}>SignUp</Text>
+          </TouchableOpacity>
+        </ScrollView>
+      </View>
+    </View>
   );
 };
 
@@ -43,32 +47,41 @@ export default SignIn;
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#FFFFFF',
-    flex: 1,
-    paddingHorizontal: 24,
+    backgroundColor: '#E9EFEC',
   },
-  text1: {
-    color: '#000000',
+  HeadersContainer: {
+    backgroundColor: '#16423C',
+    height: 260,
+  },
+  TextHeader: {
+    color: '#E9EFEC',
     fontSize: 29,
-    fontWeight: 'bold',
-    textAlign: 'center',
+    fontFamily: 'Poppins-Bold',
+    paddingLeft: 32,
+    paddingRight: 104,
   },
-  text2: {
-    color: '#000000',
+  TextHeader2: {
+    color: '#E9EFEC',
     fontSize: 14,
-    textAlign: 'center',
-    marginHorizontal: 30,
+    fontFamily: 'Poppins-Regular',
+    paddingLeft: 32,
   },
-  text3: {
-    color: '#847E7E',
-    fontSize: 13,
-    textAlign: 'center',
+  TextInputTop: {
+    color: '#0C120E',
+    fontSize: 16,
+    fontFamily: 'Poppins-Regular',
+    paddingLeft: 42,
   },
-  logoContainer: {
-    alignItems: 'center',
+  TextBottomContainer: {
+    color: '#16423C',
+    fontSize: 15,
+    fontFamily: 'Poppins-SemiBold',
+    paddingLeft: 3,
   },
-  registerText: {
-    color: '#06D48A',
-    textDecorationLine: 'underline',
+  TextBottom: {
+    color: '#0C120E',
+    fontSize: 15,
+    fontFamily: 'Poppins-Regular',
+    paddingLeft: 101,
   },
 });

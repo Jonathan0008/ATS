@@ -4,7 +4,7 @@ import {BackButton, Logo} from '../../../assets/icon';
 
 const Button = ({
   label,
-  backgroundColor = '#02CF8E',
+  backgroundColor = '#16423C',
   textColor = '#020202',
   onSubmit,
   type,
@@ -33,13 +33,15 @@ export default Button;
 const styles = StyleSheet.create({
   container: backgroundColor => ({
     backgroundColor: backgroundColor,
-    marginLeft: 68,
-    marginRight: 68,
-    paddingVertical: 12,
-    borderRadius: 15,
+    marginLeft: 33,
+    marginRight: 33,
+    paddingVertical: 11,
+    borderRadius: 8,
   }),
   label: textColor => ({
     textAlign: 'center',
     color: textColor,
+    fontSize: 16,
+    fontFamily: 'Poppins-SemiBold',
   }),
 });
