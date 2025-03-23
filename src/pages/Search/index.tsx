@@ -1,45 +1,56 @@
 import React from 'react';
 import {
-  ScrollView,
   StyleSheet,
   View,
   Text,
+  TextInput,
   TouchableOpacity,
-  TextInput as TxInput
+  Image,
 } from 'react-native';
-import {Gap} from '../../components';
-import BACK from '../../assets/icon/ion_chevron-back.svg';
-import SRC from '../../assets/icon/material-symbols-light_search.svg';
-import BP1 from '../../assets/icon/material-symbols_home-outline-rounded.svg';
-import BP2 from '../../assets/icon/icon _search outline_.svg';
-import BP3 from '../../assets/icon/zondicons_add-outline.svg';
-import BP4 from '../../assets/icon/octicon_checklist-24.svg';
-import BP5 from '../../assets/icon/lucide_user-round.svg';
+import { Gap } from '../../components';
+import { BackButton, Src } from '../../assets/icon';
+import { Shadow } from 'react-native-shadow-2';
+import { SItem } from '../../assets/Image/index';
 
-const Search = ({navigation}) => {
+const Search = ({ navigation }) => {
   return (
     <View style={styles.container}>
-      <View style={styles.containSearch}>
-        <BACK style={styles.Back} />
-        <TxInput style={styles.containSrc} />
-        <SRC style={styles.SRC} />
+      <Gap height={21} />
+      <View style={styles.searchContainer}>
+        <BackButton style={styles.backButton} />
+        <TextInput style={styles.Textinp} />
+        <View style={styles.src}>
+          <TouchableOpacity onPress={() => navigation.navigate('hasilSearch')}>
+            <Src style={styles.srcIcon} />
+          </TouchableOpacity>
+        </View>
       </View>
-      <View style={styles.buttomPage}>
-        <TouchableOpacity onPress={() => navigation.navigate('SignIn')}>
-          <BP1 style={styles.bp1} />
-        </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate('SignIn')}>
-          <BP2 style={styles.bp2} />
-        </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate('SignIn')}>
-          <BP3 style={styles.bp3} />
-        </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate('SignIn')}>
-          <BP4 style={styles.bp4} />
-        </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate('SignIn')}>
-          <BP5 style={styles.bp5} />
-        </TouchableOpacity>
+      <Gap height={39} />
+      <View style={styles.searchContainer}>
+        <View style={styles.katalogWraper}>
+          <Text style={styles.katalog}>ORGANIC</Text>
+        </View>
+        <Text style={styles.katalog}>PLASTIC</Text>
+        <Text style={styles.katalog}>CMS</Text>
+        <Text style={styles.katalog}>CMS</Text>
+      </View>
+      <Gap height={17} />
+      <View style={styles.borderline} />
+      <Gap height={19} />
+      <View style={styles.searchItem}>
+        <Image source={SItem} style={styles.image} />
+        <Text style={styles.searchItemTxt}>
+          Ini adalah kolom caption bagi pengguna untuk memberikan informasi
+          mengenai barang yang ditampilkan.
+        </Text>
+      </View>
+      <Gap height={19} />
+      <View style={styles.searchItem}>
+        <Image source={SItem} style={styles.image} />
+        <Text style={styles.searchItemTxt}>
+          Ini adalah kolom caption bagi pengguna untuk memberikan informasi
+          mengenai barang yang ditampilkan.
+        </Text>
       </View>
     </View>
   );
@@ -50,62 +61,84 @@ export default Search;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#FFFFFF',
+    backgroundColor: '#E9EFEC',
   },
-  containSearch: {
+  searchContainer: {
     flexDirection: 'row',
-    backgroundColor: '#FFFFFF',
   },
-  containPage: {
-    backgroundColor: '#FFFFFF',
-    paddingLeft: 28,
-    paddingRight: 120,
+  backButton: {
+    marginTop: 6,
+    marginLeft: 14,
   },
-  containSrc: {
-    borderColor: '#000000',
+  Textinp: {
+    fontFamily: 'Poppins-SemiBold',
+    fontSize: 10,
+    backgroundColor: '#F8FCFA',
+    borderColor: '#F8FCFA',
     borderWidth: 1,
-    borderRadius: 10,
-    marginLeft: 20,
-    marginRight: 10,
-    marginTop: 42,
-    marginBottom: 17,
-    paddingRight: 31,
-  },
-  Back: {
     marginLeft: 17,
-    marginTop: 55,
+    height: 36,
+    width: 280,
+    borderTopLeftRadius: 10,
+    borderBottomLeftRadius: 10,
+    paddingLeft: 20,
   },
-  SRC: {
-    marginLeft: 10,
-    marginTop: 55,
+  src: {
+    height: 36,
+    backgroundColor: '#F8FCFA',
+    borderWidth: 1,
+    borderColor: '#F8FCFA',
+    borderTopRightRadius: 10,
+    borderBottomRightRadius: 10,
+    paddingRight: 7,
   },
-  buttomPage: {
-    paddingHorizontal: 28,
-    paddingVertical: 7,
+  srcIcon: {
+    marginTop: 6,
+  },
+  katalog: {
+    marginLeft: 16,
+    textAlignVertical: 'center',
+    textAlign: 'center',
+    borderWidth: 2,
+    height: 29,
+    width: 73,
+    borderRadius: 8,
+    fontFamily: 'Poppins-Bold',
+    fontSize: 10,
+    color: '#16423C',
+    backgroundColor: '#F8FCFA',
+  },
+  katalogWraper: {
+    paddingLeft: 24,
+  },
+  borderline: {
+    borderWidth: 1,
+    borderColor: '#6A9C89',
+  },
+  searchItem: {
     flexDirection: 'row',
-    backgroundColor: '#06D48A',
-    position: 'absolute',
-    bottom: 0,
-    left: 0,
-    right: 0,
+    backgroundColor: '#16423C',
+    width: 385,
+    height: 135,
+    borderRadius: 10,
+    marginLeft: 14,
+    borderWidth: 2,
+    borderColor: '#F8FCFA',
   },
-  bp1: {
-    marginTop: 5,
-    marginHorizontal: 20,
+  image: {
+    width: 130,
+    height: 137,
+    objectFit: 'cover',
+    borderRadius: 15,
+    marginLeft: -2,
+    marginTop: -1,
   },
-  bp2: {
-    marginTop: 5,
-    marginHorizontal: 20,
-  },
-  bp3: {
-    marginHorizontal: 20,
-  },
-  bp4: {
-    marginTop: 5,
-    marginHorizontal: 20,
-  },
-  bp5: {
-    marginTop: 5,
-    marginHorizontal: 20,
+  searchItemTxt: {
+    fontSize: 12,
+    fontFamily: 'Poppins-Bold',
+    color: '#E9EFEC',
+    marginLeft: 11,
+    marginTop: 23,
+    marginRight: 125,
   },
 });

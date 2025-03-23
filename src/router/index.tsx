@@ -1,6 +1,16 @@
 import React from 'react';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {SplashScreen, SignIn, SignUp, Home, Search, Notif} from '../pages';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import {
+  SplashScreen,
+  SignIn,
+  SignUp,
+  Home,
+  Search,
+  Notif,
+  Profil,
+  ProfilEdit,
+  Status,
+} from '../pages';
 
 const Stack = createNativeStackNavigator();
 
@@ -10,32 +20,47 @@ const index = () => {
       <Stack.Screen
         name="SplashScreen"
         component={SplashScreen}
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
       />
       <Stack.Screen
         name="SignIn"
         component={SignIn}
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
       />
       <Stack.Screen
         name="SignUp"
         component={SignUp}
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
       />
       <Stack.Screen
         name="Home"
         component={Home}
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
       />
       <Stack.Screen
         name="Search"
         component={Search}
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
       />
-       <Stack.Screen
+      <Stack.Screen
         name="Notif"
         component={Notif}
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Profil"
+        component={Profil}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="ProfilEdit"
+        component={ProfilEdit}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Status"
+        component={Status}
+        options={{ headerShown: false }}
       />
     </Stack.Navigator>
   );
