@@ -10,7 +10,7 @@ import {Button, Gap, PageHeader, TextInput} from '../../components';
 
 const SignIn = ({navigation}) => {
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <View style={styles.HeadersContainer}>
         <Gap height={120} />
         <Text style={styles.TextHeader}>Masuk ke akun Anda</Text>
@@ -31,7 +31,7 @@ const SignIn = ({navigation}) => {
           type={undefined}
           icon={undefined}
         />
-        <Gap height={240} />
+        <Gap height={210} />
         <ScrollView horizontal={true}>
           <Text style={styles.TextBottom}>Belum Punya Akun?</Text>
           <TouchableOpacity onPress={() => navigation.navigate('SignUp')}>
@@ -39,7 +39,7 @@ const SignIn = ({navigation}) => {
           </TouchableOpacity>
         </ScrollView>
       </View>
-    </View>
+    </ScrollView>
   );
 };
 

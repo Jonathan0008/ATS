@@ -14,6 +14,7 @@ export default TextInput;
 const styles = StyleSheet.create({
   textInput: {
     backgroundColor: '#F8FCFA',
+    color: '#16423C',
     borderColor: '#16423C',
     opacity: 50,
     borderWidth: 1,

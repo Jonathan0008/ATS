@@ -1,4 +1,6 @@
 import Logo from './Logo.svg';
 import BackButton from './BackButton.svg';
-
-export {Logo, BackButton};
+import LogoutButton from './Log Out Icon.svg';
+import EditProfil from './EditProfil';
+import Src from './Search.svg';
+export { Logo, BackButton, LogoutButton, EditProfil, Src };
