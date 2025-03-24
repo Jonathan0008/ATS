@@ -38,13 +38,13 @@ const index = () => {
         options={{ headerShown: false }}
       />
       <Stack.Screen
-        name="Search"
-        component={Search}
+        name="Notif"
+        component={Notif}
         options={{ headerShown: false }}
       />
       <Stack.Screen
-        name="Notif"
-        component={Notif}
+        name="Search"
+        component={Search}
         options={{ headerShown: false }}
       />
       <Stack.Screen

@@ -7,10 +7,10 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import {Button, Gap, TextInput} from '../../components';
-import {LogoutButton} from '../../assets/icon';
-import {EditProfil} from '../../assets/icon';
-const Profil = ({navigation}) => {
+import { Gap } from '../../components';
+import { BackButton, LogoutButton } from '../../assets/icon';
+import { EditProfil } from '../../assets/icon';
+const Profil = ({ navigation }) => {
   return (
     <ScrollView style={styles.container}>
       <View style={styles.HeadersContainer}>
@@ -60,7 +60,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   LogoutButton: {
-    color: '#E9EFEC',
     marginLeft: 337,
     marginRight: 35,
     marginTop: 35,
@@ -87,4 +86,5 @@ const styles = StyleSheet.create({
     borderBottomColor: '#16423C',
     borderRadius: 8,
   },
+  backButton: {},
 });

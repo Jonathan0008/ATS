@@ -6,7 +6,7 @@ import {
   Text,
   TouchableOpacity,
 } from 'react-native';
-import {Gap} from '../../components';
+import { Gap } from '../../components';
 import Notif from '../../assets/icon/bell-notification.svg';
 import Location from '../../assets/icon/Location_Point.svg';
 import Logo from '../../assets/icon/ATS_LOGO.svg';
@@ -20,7 +20,7 @@ import BP3 from '../../assets/icon/NavPosting.svg';
 import BP4 from '../../assets/icon/NavStatus.svg';
 import BP5 from '../../assets/icon/NavProfil.svg';
 
-const Home = ({navigation}) => {
+const Home = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <ScrollView>
@@ -72,6 +72,7 @@ const Home = ({navigation}) => {
         <TouchableOpacity style={styles.educationBanner}>
           <Text style={styles.education}>Education Banner</Text>
         </TouchableOpacity>
+        <Gap height={15}/>
         <Text style={styles.category}>Kategori</Text>
         <View style={styles.listCategory}>
           <TouchableOpacity style={styles.organik}>
@@ -91,7 +92,7 @@ const Home = ({navigation}) => {
       <View style={styles.buttonPage}>
         <TouchableOpacity
           style={styles.bp1}
-          onPress={() => navigation.navigate('SignIn')}>
+          onPress={() => navigation.navigate('Home')}>
           <BP1 />
         </TouchableOpacity>
         <TouchableOpacity
@@ -106,7 +107,7 @@ const Home = ({navigation}) => {
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.bp4}
-          onPress={() => navigation.navigate('SignIn')}>
+          onPress={() => navigation.navigate('Status')}>
           <BP4 />
         </TouchableOpacity>
         <TouchableOpacity
@@ -125,6 +126,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#E9EFEC',
+    alignItems: 'center',
   },
   greeting: {
     marginRight: 160,
@@ -132,14 +134,12 @@ const styles = StyleSheet.create({
   containPage: {
     backgroundColor: '#E9EFEC',
     marginTop: 20,
-    marginLeft: 15,
     flexDirection: 'row',
     alignItems: 'center',
     alignContent: 'center',
   },
   containPage2: {
     backgroundColor: '#E9EFEC',
-    paddingLeft: 15,
     flexDirection: 'row',
     alignContent: 'center',
     alignItems: 'center',
@@ -149,7 +149,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#16423C',
     height: 280,
     width: 360,
-    marginLeft: 15,
     marginTop: 16,
     borderRadius: 16,
     alignContent: 'center',
@@ -247,7 +246,6 @@ const styles = StyleSheet.create({
     height: 110,
     width: 360,
     backgroundColor: '#6A9C89',
-    margin: 15,
     marginTop: 16,
     borderRadius: 16,
   },
@@ -259,7 +257,6 @@ const styles = StyleSheet.create({
     marginTop: 68,
   },
   category: {
-    marginLeft: 15,
     fontSize: 15,
     fontFamily: 'Poppins-Bold',
     color: '#16423C',
@@ -269,7 +266,6 @@ const styles = StyleSheet.create({
     marginTop: 16,
   },
   organik: {
-    marginLeft: 15,
     width: 171,
     height: 137,
     backgroundColor: '#16423C',
