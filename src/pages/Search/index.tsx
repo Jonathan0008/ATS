@@ -17,7 +17,9 @@ const Search = ({ navigation }) => {
     <View style={styles.container}>
       <Gap height={21} />
       <View style={styles.searchContainer}>
-        <BackButton style={styles.backButton} />
+        <TouchableOpacity onPress={() => navigation.goBack()}>
+          <BackButton style={styles.backButton} />
+        </TouchableOpacity>
         <TextInput style={styles.Textinp} />
         <View style={styles.src}>
           <TouchableOpacity onPress={() => navigation.navigate('hasilSearch')}>

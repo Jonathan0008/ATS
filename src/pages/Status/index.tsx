@@ -2,6 +2,7 @@ import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { BackButton } from '../../assets/icon';
 import { Waste1, Waste2 } from '../../assets/Image/index';
 import { Shadow } from 'react-native-shadow-2';
+import React from 'react';
 
 const Status = ({ navigation }) => {
   return (
