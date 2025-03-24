@@ -7,17 +7,19 @@ import {
   TouchableOpacity,
   Image,
 } from 'react-native';
-import { Gap } from '../../components';
-import { BackButton, Src } from '../../assets/icon';
-import { Shadow } from 'react-native-shadow-2';
-import { SItem } from '../../assets/Image/index';
+import {Gap} from '../../components';
+import {BackButton, Src} from '../../assets/icon';
+import {Shadow} from 'react-native-shadow-2';
+import {SItem} from '../../assets/Image/index';
 
-const Search = ({ navigation }) => {
+const Search = ({navigation}) => {
   return (
     <View style={styles.container}>
       <Gap height={21} />
       <View style={styles.searchContainer}>
-        <BackButton style={styles.backButton} />
+        <TouchableOpacity>
+          <BackButton style={styles.backButton} />
+        </TouchableOpacity>
         <TextInput style={styles.Textinp} />
         <View style={styles.src}>
           <TouchableOpacity onPress={() => navigation.navigate('hasilSearch')}>
@@ -38,7 +40,7 @@ const Search = ({ navigation }) => {
       <View style={styles.borderline} />
       <Gap height={19} />
       <View style={styles.searchItem}>
-        <Image source={SItem} style={styles.image} />
+        {/* <Image source={SItem} style={styles.image} /> */}
         <Text style={styles.searchItemTxt}>
           Ini adalah kolom caption bagi pengguna untuk memberikan informasi
           mengenai barang yang ditampilkan.
@@ -46,7 +48,7 @@ const Search = ({ navigation }) => {
       </View>
       <Gap height={19} />
       <View style={styles.searchItem}>
-        <Image source={SItem} style={styles.image} />
+        {/* <Image source={SItem} style={styles.image} /> */}
         <Text style={styles.searchItemTxt}>
           Ini adalah kolom caption bagi pengguna untuk memberikan informasi
           mengenai barang yang ditampilkan.
