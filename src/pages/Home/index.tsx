@@ -72,7 +72,7 @@ const Home = ({ navigation }) => {
         <TouchableOpacity style={styles.educationBanner}>
           <Text style={styles.education}>Education Banner</Text>
         </TouchableOpacity>
-        <Gap height={15}/>
+        <Gap height={15} />
         <Text style={styles.category}>Kategori</Text>
         <View style={styles.listCategory}>
           <TouchableOpacity style={styles.organik}>
@@ -102,7 +102,7 @@ const Home = ({ navigation }) => {
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.bp3}
-          onPress={() => navigation.navigate('SignIn')}>
+          onPress={() => navigation.navigate('UploadSi')}>
           <BP3 />
         </TouchableOpacity>
         <TouchableOpacity

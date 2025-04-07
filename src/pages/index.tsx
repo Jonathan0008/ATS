@@ -7,6 +7,8 @@ import Notif from './Notif';
 import Profil from './Profil';
 import ProfilEdit from './ProfilEdit';
 import Status from './Status';
+import UploadSi from './UploadSi';
+import UploadId from './UploadId';
 export {
   SignIn,
   SplashScreen,
@@ -17,4 +19,6 @@ export {
   Profil,
   ProfilEdit,
   Status,
+  UploadSi,
+  UploadId,
 };

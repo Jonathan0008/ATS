@@ -10,6 +10,8 @@ import {
   Profil,
   ProfilEdit,
   Status,
+  UploadSi,
+  UploadId,
 } from '../pages';
 
 const Stack = createNativeStackNavigator();
@@ -17,6 +19,11 @@ const Stack = createNativeStackNavigator();
 const index = () => {
   return (
     <Stack.Navigator>
+      <Stack.Screen
+        name="UploadId"
+        component={UploadId}
+        options={{ headerShown: false }}
+      />
       <Stack.Screen
         name="SplashScreen"
         component={SplashScreen}
@@ -60,6 +67,11 @@ const index = () => {
       <Stack.Screen
         name="Status"
         component={Status}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="UploadSi"
+        component={UploadSi}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>
