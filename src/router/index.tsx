@@ -20,11 +20,6 @@ const index = () => {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        name="UploadId"
-        component={UploadId}
-        options={{ headerShown: false }}
-      />
-      <Stack.Screen
         name="SplashScreen"
         component={SplashScreen}
         options={{ headerShown: false }}
@@ -72,6 +67,11 @@ const index = () => {
       <Stack.Screen
         name="UploadSi"
         component={UploadSi}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="UploadId"
+        component={UploadId}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>
